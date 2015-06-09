@@ -3,7 +3,7 @@
 Plugin Name: WPMU Two-Factor Authentication
 Description: Two-Factor Authentication using the Google Authenticator Android/iPhone/Blackberry app.
 Author: Jason Jersey
-Version: 1.0.1
+Version: 1.0.2
 
 ----------------------------------------------------------------------------
         
@@ -288,6 +288,9 @@ function profile_personal_options() {
 		echo "<input name=\"GA_secret\" id=\"GA_secret\" value=\"{$GA_secret}\" readonly=\"readonly\"  type=\"text\" size=\"25\" />";
 		echo "<input name=\"GA_newsecret\" id=\"GA_newsecret\" value=\"".__("Create new secret",'google-authenticator')."\"   type=\"button\" class=\"button\" />";
 		echo "<input name=\"show_qr\" id=\"show_qr\" value=\"".__("Show/Hide QR code",'google-authenticator')."\"   type=\"button\" class=\"button\" onclick=\"ShowOrHideQRCode();\" />";
+
+                echo "<br /><span class=\"description\"><b>Important</b>: When you create new secret, you must setup the Google Authenticator app by entering your secret or scanning the new QR code into the app.</span>\n";
+
 		echo "</td>\n";
 		echo "</tr>\n";
 
