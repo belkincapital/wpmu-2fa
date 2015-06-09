@@ -3,7 +3,7 @@
 Plugin Name: WPMU Two-Factor Authentication
 Description: Two-Factor Authentication using the Google Authenticator Android/iPhone/Blackberry app.
 Author: Jason Jersey
-Version: 1.0
+Version: 1.0.1
 
 ----------------------------------------------------------------------------
         
@@ -147,7 +147,7 @@ function add_qrcode_script() {
  */
 function loginform() {
     echo "\t<p>\n";
-    echo "\t\t<label title=\"".__('If you don\'t have Google Authenticator enabled for your account, leave this field empty.','google-authenticator')."\">".__('2FA Code','google-authenticator')."<span id=\"google-auth-info\"></span><br />\n";
+    echo "\t\t<label title=\"".__('If you don\'t have Google Authenticator enabled for your account, leave this field empty.','google-authenticator')."\">".__('2FA Code','google-authenticator')."<span id=\"google-auth-info\"></span> <small>(Leave blank if not setup)</small><br />\n";
     echo "\t\t<input type=\"text\" name=\"googleotp\" id=\"user_email\" class=\"input\" value=\"\" size=\"20\" style=\"ime-mode: inactive;\" /></label>\n";
     echo "\t</p>\n";
 }
